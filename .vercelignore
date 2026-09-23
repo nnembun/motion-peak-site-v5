@@ -1,0 +1,4 @@
+source/
+PLAN.md
+*.command
+.DS_Store

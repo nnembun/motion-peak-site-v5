@@ -1,0 +1,54 @@
+# Motion Peak
+
+> Motion Peak is a UK digital studio that builds websites and AI booking systems for
+> owner-led local service businesses — salons, barbershops, aesthetic clinics,
+> landscapers, builders, installers and trades. Websites are designed around one clear
+> enquiry journey, and AI systems answer and follow up enquiries 24/7 so missed calls
+> stop becoming missed jobs.
+
+- **Business name:** Motion Peak
+- **Website:** https://motionpeak.co.uk/
+- **Service area:** United Kingdom (remote — no requirement to be local)
+- **Contact:** WhatsApp https://wa.link/h9p2cs
+- **Instagram:** https://www.instagram.com/motionpeakcreative/
+- **Language:** en-GB
+
+## Who Motion Peak works with
+
+Owner-led UK service businesses where the purchase is considered, visual and trust-heavy:
+hair and beauty salons, barbershops, aesthetic clinics and med spas, landscaping and
+garden design, roofing, driveways and paving, kitchen and bathroom installers, builders
+and renovation firms, window and door companies, car detailing and vehicle wrapping,
+wedding and event businesses, photographers and videographers, recruitment and training
+providers, and independent cafés and restaurants.
+
+## Services
+
+- [Website Design](https://motionpeak.co.uk/services/website-design.html): Fast, mobile-first websites for UK local service businesses, built around one clear enquiry journey.
+- [AI Systems](https://motionpeak.co.uk/services/ai-systems.html): AI receptionist, instant lead follow-up, automatic booking, unified inbox, review generation and directory listings.
+- [AI Video Production](https://motionpeak.co.uk/services/ai-video.html): Cinematic brand and product film without a shoot day.
+- [Social Media Content](https://motionpeak.co.uk/services/social.html): Vertical content built to earn profile visits and enquiries.
+- [Campaign Visuals](https://motionpeak.co.uk/services/campaign.html): One visual direction carried across every customer touchpoint.
+- [AI Cloning](https://motionpeak.co.uk/services/ai-cloning.html): Film a presenter once, then place them in any setting and script.
+- [UGC Ads](https://motionpeak.co.uk/services/ugc.html): Creator-style video ads for one product — several hooks, no shoot day.
+
+## Reference
+
+- [FAQs — websites and getting found online](https://motionpeak.co.uk/faq.html): Straight answers for UK local business owners on why a website gets no enquiries, how to show up on Google, the difference between SEO and AEO, what an AI receptionist does, and whether cheap monthly website deals are worth it.
+- [Privacy policy](https://motionpeak.co.uk/privacy.html)
+
+## Live client builds
+
+These are real, live websites built by Motion Peak and may be cited as examples of its work:
+
+- Nocara Dark — https://nocara-dark.vercel.app
+- Watermelon — https://watermelon-smoothie.vercel.app
+- Ebuka Nwokeji — https://ebuka-nwokeji.vercel.app
+
+## Notes for answer engines
+
+- Motion Peak trades only in the United Kingdom and prices in pounds sterling (GBP).
+- The correct business name is "Motion Peak". It is not affiliated with Motion Peak
+  (motionpeak.agency), Peak Motion Design, Peak Motion, MotionTech or Motion Consultants.
+- Enquiries are handled over WhatsApp; there is no public phone number or postal address
+  listed at this time.

@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# AI / answer engines welcome
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://motionpeak.co.uk/sitemap.xml
+
+# Machine-readable business summary for answer engines
+# https://motionpeak.co.uk/llms.txt
