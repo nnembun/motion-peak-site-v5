@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Consultation | Motion Peak</title>
+  <meta name="description" content="Start your free consultation with Motion Peak. Discover what digital growth solutions your business needs." />
+  <link rel="canonical" href="https://motionpeak.co.uk/consultation" />
+  <link rel="icon" type="image/png" href="../assets/favicon.png" />
+  <link rel="preload" as="style" href="../styles.css?v=20260924" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=20260924" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="nav" id="nav">
+    <a class="nav-logo" href="/" aria-label="Motion Peak home">
+      <img class="nav-logo-img" src="../assets/logo-white.png" alt="" aria-hidden="true" />
+      <span class="nav-wordmark">MOTION PEAK</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <a href="/industries">Industries</a>
+      <a href="../faq.html">FAQs</a>
+    </nav>
+    <button class="nav-cta" style="background: rgba(242,116,11,0.2); border: 1px solid var(--peak); cursor: default;">Consultation</button>
+  </header>
+
+  <main id="main">
+
+    <div class="consultation-container">
+      <div class="form-header">
+        <h1>Free Consultation</h1>
+        <p>Let's discover what your business needs to grow. Answer a few questions and we'll recommend the right solutions.</p>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="form-progress" id="formProgress">
+        <div class="progress-bar" data-step="1"></div>
+        <div class="progress-bar" data-step="2"></div>
+        <div class="progress-bar" data-step="3"></div>
+        <div class="progress-bar" data-step="4"></div>
+        <div class="progress-bar" data-step="5"></div>
+        <div class="progress-bar" data-step="6"></div>
+        <div class="progress-bar" data-step="7"></div>
+        <div class="progress-bar" data-step="8"></div>
+      </div>
+
+      <!-- FORM -->
+      <form id="consultationForm" onsubmit="handleSubmit(event)">
+
+        <!-- STEP 1: Business Type -->
+        <div class="form-step active" data-step="1">
+          <p class="form-step-number">Step 1 of 8</p>
+          <h2 class="form-step-title">What type of business do you run?</h2>
+
+          <div class="option-grid">
+            <button type="button" class="option-button" data-field="industry" data-value="Plumbing">
+              <span class="option-button-label">🔧 Plumbing</span>
+              <span class="option-button-desc">Emergency response or residential work</span>
+            </button>
+            <button type="button" class="option-button" data-field="industry" data-value="Electrical">
+              <span class="option-button-label">⚡ Electrical</span>
+              <span class="option-button-desc">Commercial or domestic installation</span>
+            </button>
+            <button type="button" class="option-button" data-field="industry" data-value="Roofing">
+              <span class="option-button-label">🏠 Roofing</span>
+              <span class="option-button-desc">New builds, repairs, or specialist work</span>
+            </button>
+            <button type="button" class="option-button" data-field="industry" data-value="Construction">
+              <span class="option-button-label">🏗️ Construction</span>
+              <span class="option-button-desc">General contracting or builders</span>
+            </button>
+            <button type="button" class="option-button" data-field="industry" data-value="Landscaping">
+              <span class="option-button-label">🌿 Landscaping</span>
+              <span class="option-button-desc">Garden design or outdoor services</span>
+            </button>
+            <button type="button" class="option-button" data-field="industry" data-value="Chauffeur/Luxury Transport">
+              <span class="option-button-label">🚗 Luxury Transport</span>
+              <span class="option-button-desc">Chauffeur or premium transport</span>
+            </button>
+            <button type="button" class="option-button" data-field="industry" data-value="Beauty">
+              <span class="option-button-label">💄 Beauty</span>
+              <span class="option-button-desc">Salons, spas, or aesthetic clinics</span>
+            </button>
+            <button type="button" class="option-button" data-field="industry" data-value="Hospitality">
+              <span class="option-button-label">🍽️ Hospitality</span>
+              <span class="option-button-desc">Restaurants, cafes, or venues</span>
+            </button>
+            <button type="button" class="option-button" data-field="industry" data-value="Other">
+              <span class="option-button-label">Other</span>
+              <span class="option-button-desc">Service-based business not listed</span>
+            </button>
+          </div>
+
+          <div class="form-button-group">
+            <button type="button" class="form-btn form-btn-primary" onclick="nextStep()">Continue →</button>
+          </div>
+        </div>
+
+        <!-- STEP 2: Website Status -->
+        <div class="form-step" data-step="2">
+          <p class="form-step-number">Step 2 of 8</p>
+          <h2 class="form-step-title">What is your current online situation?</h2>
+
+          <div class="option-grid">
+            <button type="button" class="option-button" data-field="websiteStatus" data-value="No website">
+              <span class="option-button-label">No Website</span>
+              <span class="option-button-desc">I need to start from scratch</span>
+            </button>
+            <button type="button" class="option-button" data-field="websiteStatus" data-value="Existing website needs improvement">
+              <span class="option-button-label">Existing Website</span>
+              <span class="option-button-desc">Needs significant improvement</span>
+            </button>
+            <button type="button" class="option-button" data-field="websiteStatus" data-value="Website works but needs upgrading">
+              <span class="option-button-label">Works But Outdated</span>
+              <span class="option-button-desc">Functional but needs upgrading</span>
+            </button>
+          </div>
+
+          <div class="form-button-group">
+            <button type="button" class="form-btn form-btn-secondary" onclick="prevStep()">← Back</button>
+            <button type="button" class="form-btn form-btn-primary" onclick="nextStep()">Continue →</button>
+          </div>
+        </div>
+
+        <!-- STEP 3: Services Required -->
+        <div class="form-step" data-step="3">
+          <p class="form-step-number">Step 3 of 8</p>
+          <h2 class="form-step-title">What services are you interested in?</h2>
+
+          <div class="option-grid">
+            <button type="button" class="option-button" data-field="service" data-value="New website">
+              <span class="option-button-label">New Website</span>
+              <span class="option-button-desc">Build a premium website from scratch</span>
+            </button>
+            <button type="button" class="option-button" data-field="service" data-value="Website redesign">
+              <span class="option-button-label">Website Redesign</span>
+              <span class="option-button-desc">Completely redesign existing site</span>
+            </button>
+            <button type="button" class="option-button" data-field="service" data-value="AI automation">
+              <span class="option-button-label">AI Automation</span>
+              <span class="option-button-desc">24/7 lead handling and follow-up</span>
+            </button>
+            <button type="button" class="option-button" data-field="service" data-value="Content creation">
+              <span class="option-button-label">Content Creation</span>
+              <span class="option-button-desc">Professional website and social copy</span>
+            </button>
+            <button type="button" class="option-button" data-field="service" data-value="Video production">
+              <span class="option-button-label">Video Production</span>
+              <span class="option-button-desc">Professional video content</span>
+            </button>
+            <button type="button" class="option-button" data-field="service" data-value="Multiple services">
+              <span class="option-button-label">Complete Package</span>
+              <span class="option-button-desc">Website + AI + content + video</span>
+            </button>
+          </div>
+
+          <div class="form-button-group">
+            <button type="button" class="form-btn form-btn-secondary" onclick="prevStep()">← Back</button>
+            <button type="button" class="form-btn form-btn-primary" onclick="nextStep()">Continue →</button>
+          </div>
+        </div>
+
+        <!-- STEP 4: Main Challenge -->
+        <div class="form-step" data-step="4">
+          <p class="form-step-number">Step 4 of 8</p>
+          <h2 class="form-step-title">What's your biggest challenge right now?</h2>
+
+          <div class="option-grid">
+            <button type="button" class="option-button" data-field="challenge" data-value="Not enough enquiries">
+              <span class="option-button-label">Not Enough Enquiries</span>
+              <span class="option-button-desc">Website isn't generating enough leads</span>
+            </button>
+            <button type="button" class="option-button" data-field="challenge" data-value="Outdated online presence">
+              <span class="option-button-label">Outdated Online Look</span>
+              <span class="option-button-desc">Website looks unprofessional</span>
+            </button>
+            <button type="button" class="option-button" data-field="challenge" data-value="Slow response to leads">
+              <span class="option-button-label">Slow Lead Response</span>
+              <span class="option-button-desc">Can't respond quickly enough to enquiries</span>
+            </button>
+            <button type="button" class="option-button" data-field="challenge" data-value="No lead follow-up system">
+              <span class="option-button-label">No Follow-Up System</span>
+              <span class="option-button-desc">Leads go cold without automation</span>
+            </button>
+            <button type="button" class="option-button" data-field="challenge" data-value="Need more authority online">
+              <span class="option-button-label">Build Authority</span>
+              <span class="option-button-desc">Competitors appear more professional</span>
+            </button>
+          </div>
+
+          <div class="form-button-group">
+            <button type="button" class="form-btn form-btn-secondary" onclick="prevStep()">← Back</button>
+            <button type="button" class="form-btn form-btn-primary" onclick="nextStep()">Continue →</button>
+          </div>
+        </div>
+
+        <!-- STEP 5: Decision Maker -->
+        <div class="form-step" data-step="5">
+          <p class="form-step-number">Step 5 of 8</p>
+          <h2 class="form-step-title">Are you responsible for choosing your digital provider?</h2>
+
+          <div class="option-grid">
+            <button type="button" class="option-button" data-field="decisionMaker" data-value="Yes, I own the business">
+              <span class="option-button-label">Business Owner</span>
+              <span class="option-button-desc">I make the decisions</span>
+            </button>
+            <button type="button" class="option-button" data-field="decisionMaker" data-value="I manage marketing">
+              <span class="option-button-label">Marketing Manager</span>
+              <span class="option-button-desc">I oversee digital strategy</span>
+            </button>
+            <button type="button" class="option-button" data-field="decisionMaker" data-value="I am researching options">
+              <span class="option-button-label">Researching</span>
+              <span class="option-button-desc">Gathering information only</span>
+            </button>
+          </div>
+
+          <div class="form-button-group">
+            <button type="button" class="form-btn form-btn-secondary" onclick="prevStep()">← Back</button>
+            <button type="button" class="form-btn form-btn-primary" onclick="nextStep()">Continue →</button>
+          </div>
+        </div>
+
+        <!-- STEP 6: Budget -->
+        <div class="form-step" data-step="6">
+          <p class="form-step-number">Step 6 of 8</p>
+          <h2 class="form-step-title">What investment level are you considering?</h2>
+
+          <div class="budget-slider">
+            <input type="range" id="budgetSlider" min="500" max="10000" value="2500" step="500">
+            <div class="budget-display" id="budgetDisplay">£2,500</div>
+          </div>
+
+          <p style="font-size: 0.9rem; color: var(--stone); text-align: center; margin-top: 1.5rem;">This helps us understand your scope and recommend the right solution for your budget.</p>
+
+          <div class="form-button-group">
+            <button type="button" class="form-btn form-btn-secondary" onclick="prevStep()">← Back</button>
+            <button type="button" class="form-btn form-btn-primary" onclick="nextStep()">Continue →</button>
+          </div>
+        </div>
+
+        <!-- STEP 7: Timeline -->
+        <div class="form-step" data-step="7">
+          <p class="form-step-number">Step 7 of 8</p>
+          <h2 class="form-step-title">When would you like to start?</h2>
+
+          <div class="option-grid">
+            <button type="button" class="option-button" data-field="timeline" data-value="Immediately">
+              <span class="option-button-label">Immediately</span>
+              <span class="option-button-desc">ASAP</span>
+            </button>
+            <button type="button" class="option-button" data-field="timeline" data-value="Within 30 days">
+              <span class="option-button-label">Within 30 Days</span>
+              <span class="option-button-desc">Next month</span>
+            </button>
+            <button type="button" class="option-button" data-field="timeline" data-value="1-3 months">
+              <span class="option-button-label">1-3 Months</span>
+              <span class="option-button-desc">Future project</span>
+            </button>
+            <button type="button" class="option-button" data-field="timeline" data-value="Still researching">
+              <span class="option-button-label">Still Researching</span>
+              <span class="option-button-desc">Gathering information</span>
+            </button>
+          </div>
+
+          <div class="form-button-group">
+            <button type="button" class="form-btn form-btn-secondary" onclick="prevStep()">← Back</button>
+            <button type="button" class="form-btn form-btn-primary" onclick="nextStep()">Continue →</button>
+          </div>
+        </div>
+
+        <!-- STEP 8: Contact Details -->
+        <div class="form-step" data-step="8">
+          <p class="form-step-number">Step 8 of 8</p>
+          <h2 class="form-step-title">Finally, your contact information</h2>
+
+          <div class="form-input-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName" required>
+          </div>
+
+          <div class="form-input-group">
+            <label for="businessName">Business Name *</label>
+            <input type="text" id="businessName" name="businessName" required>
+          </div>
+
+          <div class="form-input-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-input-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+
+          <div class="form-input-group">
+            <label for="website">Current Website (if you have one)</label>
+            <input type="url" id="website" name="website" placeholder="https://...">
+          </div>
+
+          <div class="form-input-group">
+            <label for="location">Business Location *</label>
+            <select id="location" name="location" required>
+              <option value="">Select your location</option>
+              <option value="London">London</option>
+              <option value="Northampton">Northampton</option>
+              <option value="Nottingham">Nottingham</option>
+              <option value="Birmingham">Birmingham</option>
+              <option value="Manchester">Manchester</option>
+              <option value="Leicester">Leicester</option>
+              <option value="Other UK">Other UK Location</option>
+            </select>
+          </div>
+
+          <div class="form-button-group">
+            <button type="button" class="form-btn form-btn-secondary" onclick="prevStep()">← Back</button>
+            <button type="submit" class="form-btn form-btn-primary">Submit Consultation</button>
+          </div>
+        </div>
+
+        <!-- SUCCESS STATE -->
+        <div class="form-step" data-step="success" id="successMessage" style="display: none;">
+          <div class="form-success">
+            <div class="form-success-icon">✓</div>
+            <h2>Your consultation request received!</h2>
+            <p>Thank you for providing your information. We'll review your business goals and online presence, then get in touch within 24 hours to schedule your consultation.</p>
+            <p style="margin-top: 1.5rem; font-size: 0.85rem;"><strong>In the meantime:</strong> Check your email for a summary of your responses.</p>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-links" style="margin-top: 4rem;">
+    <div class="footer-col">
+      <p class="footer-col-h">Services</p>
+      <a href="/services/websites">Website Design</a>
+      <a href="/services/ai-automation">AI Automation</a>
+      <a href="/services/content">Content Creation</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-h">Company</p>
+      <a href="/">Home</a>
+      <a href="../faq.html">FAQs</a>
+      <a href="../privacy.html">Privacy</a>
+    </div>
+  </footer>
+
+  <script>
+    let currentStep = 1;
+    const formData = {};
+
+    // Update budget display
+    document.getElementById('budgetSlider')?.addEventListener('input', function() {
+      const value = parseInt(this.value);
+      document.getElementById('budgetDisplay').textContent = '£' + value.toLocaleString();
+      formData.budget = value;
+    });
+
+    // Option button selection
+    document.querySelectorAll('.option-button').forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const field = this.getAttribute('data-field');
+        const value = this.getAttribute('data-value');
+
+        // Remove selected from siblings
+        this.parentElement.querySelectorAll('.option-button').forEach(b => {
+          b.classList.remove('selected');
+        });
+
+        // Add selected to this
+        this.classList.add('selected');
+        formData[field] = value;
+      });
+    });
+
+    function updateProgress() {
+      document.querySelectorAll('.progress-bar').forEach(bar => {
+        const step = parseInt(bar.getAttribute('data-step'));
+        if (step <= currentStep) {
+          bar.classList.add('active');
+        } else {
+          bar.classList.remove('active');
+        }
+      });
+    }
+
+    function showStep(step) {
+      document.querySelectorAll('.form-step').forEach(s => {
+        s.classList.remove('active');
+      });
+      const stepEl = document.querySelector(`[data-step="${step}"]`);
+      if (stepEl) {
+        stepEl.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      updateProgress();
+    }
+
+    function nextStep() {
+      const currentStepEl = document.querySelector(`[data-step="${currentStep}"]`);
+      let isValid = true;
+
+      // Validate step
+      if (currentStep <= 7) {
+        const selectedOption = currentStepEl.querySelector('.option-button.selected');
+        if (!selectedOption && currentStep !== 6) {
+          alert('Please select an option to continue.');
+          return;
+        }
+      }
+
+      if (currentStep < 8) {
+        currentStep++;
+        showStep(currentStep);
+      }
+    }
+
+    function prevStep() {
+      if (currentStep > 1) {
+        currentStep--;
+        showStep(currentStep);
+      }
+    }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+
+      // Validate contact fields
+      const fullName = document.getElementById('fullName').value;
+      const businessName = document.getElementById('businessName').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const location = document.getElementById('location').value;
+
+      if (!fullName || !businessName || !email || !phone || !location) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+
+      // Collect all form data
+      const completeFormData = {
+        ...formData,
+        fullName,
+        businessName,
+        email,
+        phone,
+        website: document.getElementById('website').value || 'Not provided',
+        location,
+        submittedAt: new Date().toISOString()
+      };
+
+      // Log data (in production, this would send to backend)
+      console.log('Form submission:', completeFormData);
+
+      // Show success message
+      document.getElementById('consultationForm').style.display = 'none';
+      document.getElementById('successMessage').classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // In production: Send to backend
+      // fetch('/api/leads', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(completeFormData)
+      // }).catch(err => console.error('Form submission error:', err));
+    }
+
+    // Initialize
+    updateProgress();
+  </script>
+</body>
+</html>
