@@ -95,6 +95,187 @@
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=1393496082874243&ev=PageView&noscript=1"
   /></noscript>
+  <style>
+    .hero-phase2 {
+      position: relative;
+      padding: clamp(4rem, 12vh, 8rem) clamp(1.4rem, 5vw, 3.4rem);
+      background: linear-gradient(135deg, rgba(5,5,5,0.95) 0%, rgba(10,10,15,0.95) 100%);
+      border-bottom: 1px solid rgba(200,201,204,0.1);
+      overflow: hidden;
+    }
+
+    .hero-phase2::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 60%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(242,116,11,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-phase2-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero-phase2-kicker {
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--peak);
+      margin-bottom: 1rem;
+    }
+
+    .hero-phase2-headline {
+      font-size: clamp(2rem, 6vw, 3.8rem);
+      line-height: 1.1;
+      font-family: var(--serif);
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      max-width: 900px;
+    }
+
+    .hero-phase2-headline em {
+      display: block;
+      font-style: normal;
+      color: var(--peak);
+      font-weight: 500;
+    }
+
+    .hero-phase2-subtitle {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--stone);
+      max-width: 700px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-phase2-cta-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .hero-phase2-cta-group a {
+      padding: 0.9rem 2rem;
+      border-radius: 0.3rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .hero-phase2-cta-primary {
+      background: var(--peak);
+      color: var(--bg);
+    }
+
+    .hero-phase2-cta-primary:hover {
+      background: #ff8c1a;
+      transform: translateY(-2px);
+    }
+
+    .hero-phase2-cta-secondary {
+      border: 1.5px solid var(--peak);
+      color: var(--peak);
+    }
+
+    .hero-phase2-cta-secondary:hover {
+      background: rgba(242,116,11,0.1);
+    }
+
+    .transformation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .transformation-card {
+      background: rgba(29,29,32,0.5);
+      border: 1px solid rgba(200,201,204,0.1);
+      border-radius: 0.4rem;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .transformation-card:hover {
+      background: rgba(29,29,32,0.7);
+      border-color: rgba(242,116,11,0.3);
+    }
+
+    .transformation-stat {
+      font-size: 2rem;
+      font-family: var(--serif);
+      color: var(--peak);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .transformation-label {
+      font-size: 0.95rem;
+      color: var(--stone);
+      line-height: 1.6;
+    }
+
+    .industries-showcase {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .industry-showcase-card {
+      position: relative;
+      height: 200px;
+      border-radius: 0.4rem;
+      overflow: hidden;
+      cursor: pointer;
+      group: 'industry-card';
+    }
+
+    .industry-showcase-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .industry-showcase-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .industry-showcase-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem;
+      color: var(--white);
+    }
+
+    .industry-showcase-name {
+      font-size: 1.1rem;
+      font-family: var(--serif);
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+
+    .industry-showcase-type {
+      font-size: 0.85rem;
+      color: var(--stone);
+    }
+  </style>
 </head>
 <body>
 
@@ -131,223 +312,42 @@
 
   <main id="main">
 
-    <!-- ============ HERO: CLEAR VALUE PROPOSITION ============ -->
-    <section class="hero-section" id="hero">
-      <div class="hero-content">
-        <p class="hero-kicker">Premium Digital Growth Agency</p>
-        <h1 class="hero-headline">Premium websites and AI systems built to help businesses get more <em>customers.</em></h1>
-        <p class="hero-description">
-          Motion Peak helps UK service businesses improve their online presence through high-converting websites, AI automation systems, and professional content that builds trust and generates enquiries.
-        </p>
-        <div class="hero-cta-group">
-          <a href="/consultation" class="hero-cta-primary">Get Your Free Website Audit</a>
-          <a href="#showcase" class="hero-cta-secondary">View Our Work</a>
-        </div>
-      </div>
-    </section>
+    <!-- ============ HERO: DIGITAL TRANSFORMATION JOURNEY ============ -->
+    <section class="hero-phase2" id="hero">
+      <div class="hero-phase2-content">
+        <p class="hero-phase2-kicker">Digital Transformation</p>
+        <h1 class="hero-phase2-headline">Watch businesses transform <em>online.</em></h1>
+        <p class="hero-phase2-subtitle">Motion Peak builds premium websites and AI systems that help UK service businesses attract more customers, close more deals, and scale sustainably. See what transformation looks like.</p>
 
-    <!-- ============ WHO WE HELP ============ -->
-    <section class="section-wrap" style="padding: clamp(3rem, 7vh, 5rem) clamp(1.4rem, 5vw, 3.4rem); border-bottom: 1px solid rgba(200,201,204,0.1);">
-      <div class="section-header">
-        <p class="section-kicker">WHO WE HELP</p>
-        <h2 class="section-title">We work with service <em>businesses</em> across the UK.</h2>
-      </div>
-
-      <div class="industries-grid">
-        <a href="/industries/plumbers" class="industry-card">
-          <div class="industry-icon">🔧</div>
-          <h3>Plumbing</h3>
-          <p>Emergency response & residential specialists</p>
-        </a>
-        <a href="/industries/electricians" class="industry-card">
-          <div class="industry-icon">⚡</div>
-          <h3>Electrical</h3>
-          <p>Commercial & domestic installation</p>
-        </a>
-        <a href="/industries/roofing" class="industry-card">
-          <div class="industry-icon">🏠</div>
-          <h3>Roofing</h3>
-          <p>New builds & repair specialists</p>
-        </a>
-        <a href="/industries/construction" class="industry-card">
-          <div class="industry-icon">🏗️</div>
-          <h3>Construction</h3>
-          <p>General contracting & builders</p>
-        </a>
-        <a href="/industries/landscaping" class="industry-card">
-          <div class="industry-icon">🌿</div>
-          <h3>Landscaping</h3>
-          <p>Garden design & outdoor services</p>
-        </a>
-        <a href="/industries/chauffeurs" class="industry-card">
-          <div class="industry-icon">🚗</div>
-          <h3>Luxury Transport</h3>
-          <p>Chauffeur & premium transport</p>
-        </a>
-        <a href="/industries/beauty" class="industry-card">
-          <div class="industry-icon">💄</div>
-          <h3>Beauty</h3>
-          <p>Salons, spas & aesthetic clinics</p>
-        </a>
-        <a href="/industries/hospitality" class="industry-card">
-          <div class="industry-icon">🍽️</div>
-          <h3>Hospitality</h3>
-          <p>Restaurants, cafes & venues</p>
-        </a>
-      </div>
-    </section>
-
-    <!-- ============ PROBLEMS WE SOLVE ============ -->
-    <section class="problems-section">
-      <div class="section-wrap">
-        <div class="section-header">
-          <p class="section-kicker">The Challenge</p>
-          <h2 class="section-title">Why businesses lose <em>customers.</em></h2>
+        <div class="hero-phase2-cta-group">
+          <a href="/consultation" class="hero-phase2-cta-primary">Start Free Consultation</a>
+          <a href="#showcase" class="hero-phase2-cta-secondary">See Our Work →</a>
         </div>
 
-        <div class="problems-grid">
-          <div class="problem-item">
-            <div class="problem-number">1</div>
-            <div class="problem-content">
-              <h3>Website Doesn't Create Trust</h3>
-              <p>An outdated or unprofessional website signals that your business isn't serious. Competitors with better websites capture your enquiries.</p>
-            </div>
+        <div class="transformation-grid">
+          <div class="transformation-card">
+            <div class="transformation-stat">3-5x</div>
+            <div class="transformation-label">Increase in website enquiries within 6 months</div>
           </div>
-
-          <div class="problem-item">
-            <div class="problem-number">2</div>
-            <div class="problem-content">
-              <h3>Visitors Can't Easily Enquire</h3>
-              <p>When your call-to-action is buried or unclear, visitors leave without contacting you. You lose leads before they even try.</p>
-            </div>
+          <div class="transformation-card">
+            <div class="transformation-stat">24/7</div>
+            <div class="transformation-label">Automated lead capture even while on jobs</div>
           </div>
-
-          <div class="problem-item">
-            <div class="problem-number">3</div>
-            <div class="problem-content">
-              <h3>Leads Go Unanswered</h3>
-              <p>You miss calls while on jobs. Leads wait for a response and contact your competitors instead. Speed matters more than price.</p>
-            </div>
-          </div>
-
-          <div class="problem-item">
-            <div class="problem-number">4</div>
-            <div class="problem-content">
-              <h3>No Follow-Up System</h3>
-              <p>Interested prospects fade away because there's no automated follow-up. Every lead that goes quiet is lost revenue.</p>
-            </div>
-          </div>
-
-          <div class="problem-item">
-            <div class="problem-number">5</div>
-            <div class="problem-content">
-              <h3>Poor Mobile Experience</h3>
-              <p>Most visitors arrive on mobile, but your site is slow or hard to use on their phone. They leave before seeing your best work.</p>
-            </div>
-          </div>
-
-          <div class="problem-item">
-            <div class="problem-number">6</div>
-            <div class="problem-content">
-              <h3>No Authority Online</h3>
-              <p>Without professional content and visibility, people don't know who you are. You rely entirely on referrals to survive.</p>
-            </div>
+          <div class="transformation-card">
+            <div class="transformation-stat">Premium</div>
+            <div class="transformation-label">Creative identity that sets you apart</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ SERVICES ============ -->
-    <section class="section-wrap" style="padding: clamp(3rem, 7vh, 5rem) clamp(1.4rem, 5vw, 3.4rem); border-bottom: 1px solid rgba(200,201,204,0.1);">
-      <div class="section-header">
-        <p class="section-kicker">WHAT WE BUILD</p>
-        <h2 class="section-title">Four services that drive <em>growth.</em></h2>
-      </div>
-
-      <div class="services-grid">
-        <a href="/services/websites" class="service-card">
-          <span class="service-card-tag">Website Systems</span>
-          <h3>Premium Website Design</h3>
-          <p>High-converting websites designed to turn visitors into enquiries. Mobile-first, fast-loading, optimized for conversions.</p>
-          <span class="service-card-cta">Learn More →</span>
-        </a>
-
-        <a href="/services/ai-automation" class="service-card">
-          <span class="service-card-tag">AI Automation</span>
-          <h3>AI Automation Systems</h3>
-          <p>AI-powered workflows, lead follow-up and customer communication systems. Answer enquiries 24/7, even while you're on jobs.</p>
-          <span class="service-card-cta">Learn More →</span>
-        </a>
-
-        <a href="/services/content" class="service-card">
-          <span class="service-card-tag">Content Systems</span>
-          <h3>Professional Content</h3>
-          <p>Professional content designed to build trust and authority online. Website copy, social media content, and case studies.</p>
-          <span class="service-card-cta">Learn More →</span>
-        </a>
-
-        <a href="/services/ai-video" class="service-card">
-          <span class="service-card-tag">AI Video</span>
-          <h3>AI Video Production</h3>
-          <p>Professional video content created with AI. Testimonials, product videos, and educational content without expensive shoots.</p>
-          <span class="service-card-cta">Learn More →</span>
-        </a>
-      </div>
-
-      <div style="text-align: center; margin-top: 3rem;">
-        <a href="/services" class="service-card-cta" style="font-size: 1.05rem;">View All Services →</a>
-      </div>
-    </section>
-
-    <!-- ============ PROCESS ============ -->
-    <section class="process-section" style="border-bottom: 1px solid rgba(200,201,204,0.1);">
-      <div class="section-wrap">
-        <div class="section-header">
-          <p class="section-kicker">HOW IT WORKS</p>
-          <h2 class="section-title">Our proven <em>process.</em></h2>
-        </div>
-
-        <div class="process-steps">
-          <div class="process-step">
-            <div class="process-number">01</div>
-            <h3>Discovery</h3>
-            <p>We understand your business, goals, and current challenges through detailed consultation.</p>
-          </div>
-
-          <div class="process-step">
-            <div class="process-number">02</div>
-            <h3>Strategy</h3>
-            <p>We develop a digital growth strategy tailored to your industry and business model.</p>
-          </div>
-
-          <div class="process-step">
-            <div class="process-number">03</div>
-            <h3>Design & Build</h3>
-            <p>We design and build your website or systems with your approval at each stage.</p>
-          </div>
-
-          <div class="process-step">
-            <div class="process-number">04</div>
-            <h3>Launch</h3>
-            <p>We launch your new website or systems and ensure everything runs smoothly.</p>
-          </div>
-
-          <div class="process-step">
-            <div class="process-number">05</div>
-            <h3>Support</h3>
-            <p>Ongoing support ensures your systems keep working and generating enquiries.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ REAL CASE STUDIES (Showcase) ============ -->
+    <!-- ============ SHOWCASE: REAL TRANSFORMATIONS ============ -->
     <section class="showcase" id="showcase" style="padding: clamp(3rem, 7vh, 5rem) clamp(1.4rem, 5vw, 3.4rem); border-bottom: 1px solid rgba(200,201,204,0.1);">
       <div class="section-wrap">
         <div class="section-header">
-          <p class="section-kicker">SELECTED WORK</p>
-          <h2 class="section-title">Real websites built by the <em>studio.</em></h2>
-          <p class="section-description">These are live projects we've built that demonstrate our design capability and technical excellence.</p>
+          <p class="section-kicker">REAL WEBSITES</p>
+          <h2 class="section-title">Live projects that show what's <em>possible.</em></h2>
+          <p class="section-description">These are real businesses we've transformed. Each site was built to attract customers, close deals, and scale operations online.</p>
         </div>
 
         <div class="showcase-track" id="showcaseTrack" role="list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
@@ -359,7 +359,8 @@
             <div class="sc-meta" style="padding: 1.5rem;">
               <p class="g-num" style="font-size: 1.4rem; font-family: var(--serif); color: var(--peak); margin-bottom: 0.5rem;">01</p>
               <h3 class="sc-name" style="font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem;">Nocara Dark</h3>
-              <p class="sc-tags" style="font-size: 0.85rem; color: var(--steel);">Luxury Chocolate · Website Design</p>
+              <p class="sc-tags" style="font-size: 0.85rem; color: var(--steel);">Luxury Chocolate · Premium E-Commerce</p>
+              <p style="font-size: 0.9rem; color: var(--stone); margin-top: 0.8rem; line-height: 1.5;">Built a high-converting online presence for luxury chocolate brand. Editorial design language with premium visual storytelling.</p>
             </div>
           </article>
 
@@ -371,7 +372,8 @@
             <div class="sc-meta" style="padding: 1.5rem;">
               <p class="g-num" style="font-size: 1.4rem; font-family: var(--serif); color: var(--peak); margin-bottom: 0.5rem;">02</p>
               <h3 class="sc-name" style="font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem;">Watermelon</h3>
-              <p class="sc-tags" style="font-size: 0.85rem; color: var(--steel);">Cold-Pressed Juice · Website Design</p>
+              <p class="sc-tags" style="font-size: 0.85rem; color: var(--steel);">Cold-Pressed Juice · Brand Presence</p>
+              <p style="font-size: 0.9rem; color: var(--stone); margin-top: 0.8rem; line-height: 1.5;">Premium health beverage brand with cinematic product storytelling. Designed to convert health-conscious customers online.</p>
             </div>
           </article>
 
@@ -383,20 +385,229 @@
             <div class="sc-meta" style="padding: 1.5rem;">
               <p class="g-num" style="font-size: 1.4rem; font-family: var(--serif); color: var(--peak); margin-bottom: 0.5rem;">03</p>
               <h3 class="sc-name" style="font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem;">Ebuka Nwokeji</h3>
-              <p class="sc-tags" style="font-size: 0.85rem; color: var(--steel);">Personal Brand · Website Design</p>
+              <p class="sc-tags" style="font-size: 0.85rem; color: var(--steel);">Personal Brand · Creator Platform</p>
+              <p style="font-size: 0.9rem; color: var(--stone); margin-top: 0.8rem; line-height: 1.5;">Personal brand website with editorial storytelling. Positions creator as industry authority with premium visual presence.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ CTA SECTION ============ -->
-    <section style="padding: clamp(3rem, 7vh, 5rem) clamp(1.4rem, 5vw, 3.4rem); text-align: center; border-bottom: 1px solid rgba(200,201,204,0.1);">
+    <!-- ============ WHO WE HELP ============ -->
+    <section class="section-wrap" style="padding: clamp(3rem, 7vh, 5rem) clamp(1.4rem, 5vw, 3.4rem); border-bottom: 1px solid rgba(200,201,204,0.1);">
+      <div class="section-header">
+        <p class="section-kicker">INDUSTRIES WE SERVE</p>
+        <h2 class="section-title">We work with service <em>businesses</em> across the UK.</h2>
+      </div>
+
+      <div class="industries-grid">
+        <a href="/industries/plumbers" class="industry-card">
+          <div class="industry-icon">🔧</div>
+          <h3>Plumbing</h3>
+          <p>Emergency & residential specialists</p>
+        </a>
+        <a href="/industries/electricians" class="industry-card">
+          <div class="industry-icon">⚡</div>
+          <h3>Electrical</h3>
+          <p>Commercial & domestic contractors</p>
+        </a>
+        <a href="/industries/construction" class="industry-card">
+          <div class="industry-icon">🏗️</div>
+          <h3>Construction</h3>
+          <p>Builders & general contractors</p>
+        </a>
+        <a href="/industries/roofing" class="industry-card">
+          <div class="industry-icon">🏠</div>
+          <h3>Roofing</h3>
+          <p>Repair & installation specialists</p>
+        </a>
+        <a href="/industries/landscaping" class="industry-card">
+          <div class="industry-icon">🌿</div>
+          <h3>Landscaping</h3>
+          <p>Garden design & outdoor services</p>
+        </a>
+        <a href="/industries/chauffeurs" class="industry-card">
+          <div class="industry-icon">🚗</div>
+          <h3>Luxury Transport</h3>
+          <p>Premium chauffeur services</p>
+        </a>
+        <a href="/industries/beauty" class="industry-card">
+          <div class="industry-icon">💄</div>
+          <h3>Beauty & Wellness</h3>
+          <p>Salons, spas & clinics</p>
+        </a>
+        <a href="/industries/hospitality" class="industry-card">
+          <div class="industry-icon">🍽️</div>
+          <h3>Hospitality</h3>
+          <p>Restaurants, cafes & venues</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section-wrap" style="padding: clamp(3rem, 7vh, 5rem) clamp(1.4rem, 5vw, 3.4rem); border-bottom: 1px solid rgba(200,201,204,0.1);">
+      <div class="section-header">
+        <p class="section-kicker">WHAT WE BUILD</p>
+        <h2 class="section-title">Solutions that drive real <em>growth.</em></h2>
+      </div>
+
+      <div class="services-grid">
+        <a href="/services/websites" class="service-card">
+          <span class="service-card-tag">Websites</span>
+          <h3>Premium Website Design</h3>
+          <p>High-converting websites that attract customers and close deals. Mobile-first, fast-loading, built for your industry.</p>
+          <span class="service-card-cta">Learn More →</span>
+        </a>
+
+        <a href="/services/ai-automation" class="service-card">
+          <span class="service-card-tag">AI Systems</span>
+          <h3>AI Automation Systems</h3>
+          <p>24/7 lead capture and follow-up. Answer enquiries instantly, qualify leads automatically, never miss a customer.</p>
+          <span class="service-card-cta">Learn More →</span>
+        </a>
+
+        <a href="/services/content" class="service-card">
+          <span class="service-card-tag">Content</span>
+          <h3>Professional Content</h3>
+          <p>Website copy, testimonials, case studies, and social content. Build authority and trust in your market.</p>
+          <span class="service-card-cta">Learn More →</span>
+        </a>
+
+        <a href="/services/ai-video" class="service-card">
+          <span class="service-card-tag">Video</span>
+          <h3>AI Video Production</h3>
+          <p>Professional video content without expensive shoots. Testimonials, product videos, and educational content.</p>
+          <span class="service-card-cta">Learn More →</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="process-section" style="border-bottom: 1px solid rgba(200,201,204,0.1);">
       <div class="section-wrap">
-        <h2 class="section-title">Ready to improve your online presence?</h2>
-        <p class="section-description">Start with a free consultation. We'll review your current situation and recommend next steps.</p>
+        <div class="section-header">
+          <p class="section-kicker">HOW WE WORK</p>
+          <h2 class="section-title">A transparent <em>process.</em></h2>
+        </div>
+
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="process-number">01</div>
+            <h3>Discovery Call</h3>
+            <p>We understand your business, goals, current challenges, and what success looks like for you.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="process-number">02</div>
+            <h3>Strategy</h3>
+            <p>We recommend the right solution for your industry and budget. Website, AI, content, or full package.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="process-number">03</div>
+            <h3>Design & Build</h3>
+            <p>We design and build with your approval at each stage. Transparent process from start to launch.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="process-number">04</div>
+            <h3>Launch</h3>
+            <p>We launch your site or system and ensure everything works perfectly from day one.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="process-number">05</div>
+            <h3>Ongoing Support</h3>
+            <p>Continued support, updates, and optimization to keep your systems generating enquiries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq-section">
+      <div class="section-wrap">
+        <h2 style="font-size: 1.8rem; font-family: var(--serif); color: var(--white); margin-bottom: 2rem;">Common questions about web design and AI <em>systems.</em></h2>
+
+        <div class="faq-item open">
+          <div class="faq-question">
+            <span>How long does a premium website take?</span>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            A typical premium website takes 4-8 weeks from discovery to launch, depending on complexity and how many revisions you want. We work efficiently without cutting corners. AI automation can be added to existing sites in 2-3 weeks.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How much does this cost?</span>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            Premium websites typically start at £2,500-4,000 depending on features. AI automation adds £250-500/month. Content packages are customizable. We always show clear ROI. Book a free consultation for a custom quote based on your needs.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do we need to meet in person?</span>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            No. Everything happens remotely via video call, email, and WhatsApp. You stay focused on your business while we build. We're UK-based but work with clients nationwide and keep costs down by working remotely.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What if we already have a website?</span>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            We can migrate your existing content while completely redesigning. We handle URL redirects and SEO preservation so you don't lose your current Google rankings. Your existing authority transfers to the new site.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What support do you provide after launch?</span>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            We offer ongoing support packages including updates, security patches, performance monitoring, and AI system updates. You can choose pay-as-you-go support or a monthly retainer depending on your needs.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can you help with SEO?</span>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            Yes. Every website we build includes technical SEO, mobile optimization, and local optimization for your area. We also offer content-based SEO and strategy services to help you rank for high-value keywords.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How do I get started?</span>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            Book a free consultation on our website. We'll discuss your business, goals, and recommend the right solution for you. No obligation, no sales pitch—just honest advice about what will work.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section style="padding: clamp(3rem, 7vh, 5rem) clamp(1.4rem, 5vw, 3.4rem); text-align: center; border-top: 1px solid rgba(200,201,204,0.1);">
+      <div class="section-wrap">
+        <h2 class="section-title">Ready to transform your business <em>online?</em></h2>
+        <p class="section-description">Book a free consultation. We'll review your current situation, recommend next steps, and show you what's possible.</p>
         <div style="margin-top: 2rem;">
-          <a href="/consultation" class="hero-cta-primary" style="display: inline-block;">Start Your Free Consultation</a>
+          <a href="/consultation" class="hero-cta-primary" style="display: inline-block; padding: 0.9rem 2rem; border-radius: 0.3rem; background: var(--peak); color: var(--bg); text-decoration: none; font-weight: 500; transition: all 0.3s ease;">Get Your Free Consultation</a>
         </div>
       </div>
     </section>
@@ -416,8 +627,10 @@
       <p class="footer-col-h">Industries</p>
       <a href="/industries/plumbers">Plumbing</a>
       <a href="/industries/electricians">Electrical</a>
-      <a href="/industries/roofing">Roofing</a>
       <a href="/industries/construction">Construction</a>
+      <a href="/industries/roofing">Roofing</a>
+      <a href="/industries/landscaping">Landscaping</a>
+      <a href="/industries/chauffeurs">Luxury Transport</a>
     </div>
     <div class="footer-col">
       <p class="footer-col-h">Locations</p>
@@ -425,6 +638,8 @@
       <a href="/locations/northampton">Northampton</a>
       <a href="/locations/nottingham">Nottingham</a>
       <a href="/locations/birmingham">Birmingham</a>
+      <a href="/locations/manchester">Manchester</a>
+      <a href="/locations/leicester">Leicester</a>
     </div>
     <div class="footer-col">
       <p class="footer-col-h">Company</p>
@@ -438,7 +653,7 @@
   <script src="vendor/lenis.min.js"></script>
   <script src="main.js"></script>
   <script>
-    // Simple video slow-motion toggle
+    // Video slow-motion toggle
     document.querySelectorAll('[data-slow]').forEach(btn => {
       btn.addEventListener('click', function(e) {
         e.preventDefault();
@@ -455,6 +670,16 @@
       });
     });
 
+    // FAQ toggle
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', function() {
+        document.querySelectorAll('.faq-item').forEach(i => {
+          if (i !== this) i.classList.remove('open');
+        });
+        this.classList.toggle('open');
+      });
+    });
+
     // Mobile menu toggle
     const navBurger = document.getElementById('navBurger');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -466,7 +691,6 @@
         navBurger.setAttribute('aria-expanded', !isOpen);
       });
 
-      // Close menu when clicking links
       mobileMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', function() {
           mobileMenu.setAttribute('aria-hidden', 'true');
